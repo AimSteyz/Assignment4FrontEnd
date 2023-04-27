@@ -1,0 +1,146 @@
+<app-header></app-header>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DIY Website - Flat Design Home Page</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #ffffff;
+		}
+		
+		header {
+			display: flex;
+			align-items: center;
+			background-color: #2ecc71;
+			color: #fff;
+			padding: 10px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+		}
+		
+		h1 {
+			font-size: 24px;
+			margin: 0;
+			margin-left: 10px;
+		}
+		
+		.main {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 1200px;
+			margin: 0 auto;
+			margin-top: 50px;
+			justify-content: space-between;
+		}
+		
+		.card {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+			margin-bottom: 30px;
+			width: calc(33.33% - 20px);
+			margin-right: 20px;
+			padding: 20px;
+		}
+		
+		.card:last-child {
+			margin-right: 0;
+		}
+		
+		.card h2 {
+			font-size: 20px;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+		
+		.card p {
+			font-size: 16px;
+			line-height: 1.4;
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+		
+		.card button {
+			background-color: #2ecc71;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px;
+			cursor: pointer;
+			font-size: 16px;
+			transition: background-color 0.3s ease-in-out;
+		}
+		
+		.card button:hover {
+			background-color: #27ae60;
+		}
+		
+		.banner {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #3498db;
+			color: #fff;
+			padding: 50px;
+			margin-top: 50px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+			text-align: center;
+			font-size: 24px;
+			line-height: 1.4;
+			border-radius: 10px;
+		}
+		
+		.banner h2 {
+			font-size: 36px;
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+		
+		.banner button {
+			background-color: #fff;
+			color: #3498db;
+			border: none;
+			border-radius: 5px;
+			padding: 10px;
+			cursor: pointer;
+			font-size: 16px;
+			transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+			margin-top: 20px;
+		}
+		
+		.banner button:hover {
+			background-color: #3498db;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="main">
+
+		<div class="card">
+			<h2>DIY Tips</h2>
+			<p>Get expert tips and tricks on how to make your DIY projects a success, from choosing the right tools to troubleshooting.</p>
+            <button onclick="window.location.href='/search'">Ask for help</button>
+		</div>
+
+		<div class="card">
+			<h2>Looking for help now ?</h2>
+			<p>Create an account and ask your question.</p>
+		</div>
+	</div>
+	
+	<div class="banner">
+		<div>
+			<h2>Ready to start your DIY journey?</h2>
+			<p>Join our community today and discover the endless possibilities of DIY!</p>
+            <button onclick="window.location.href='/register'">Create your account</button>
+		</div>
+	</div>
+</body>
+</html>
+
+<app-footer></app-footer>
