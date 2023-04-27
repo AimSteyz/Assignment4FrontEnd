@@ -32,7 +32,7 @@
 			margin-bottom: 30px;
 		}
 		
-		form {
+		.form {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -63,17 +63,27 @@
 		button[type="submit"]:hover {
 			background-color: #27ae60;
 		}
+
+		.center {
+			text-align: center;
+			line-height: 200px;
+		}
 		
 	</style>
 </head>
 <body>
 	<div class="container">
 		<h1>Search for help</h1>
-		<form>
-			<input type="text" placeholder="Search...">
-			<button type="submit">Search</button>
-		</form>
+		<div class="form">
+			<input type="text" placeholder="Search..." [(ngModel)]="searchedArticle">
+			<button type="submit" (click)="searchBtn()">Search</button>
+		</div>
 	</div>
+	<h1 class="center" *ngIf="IsDisplayArticleEmpty; else showThis">There is no question about that, you can ask it !</h1>
+	<ng-template #showThis>
+		<app-questioncard *ngFor="let article of DisplayArticle" [cardTitle]="article.title" [cardText]="article.content"></app-questioncard>
+	</ng-template>
+
 	
 
 

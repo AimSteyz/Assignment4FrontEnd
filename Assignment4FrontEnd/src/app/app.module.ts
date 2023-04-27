@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'; // <-- Import FormsModule
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -30,7 +29,7 @@ import { QuestioncardComponent } from './questioncard/questioncard.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule // <-- Include module in our AppModules
+    FormsModule, // <-- Include module in our AppModules
   ],
   providers: [],
   bootstrap: [AppComponent]

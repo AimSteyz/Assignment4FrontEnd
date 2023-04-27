@@ -3,13 +3,17 @@
 	<main class="main">
 		<div class="container">
 			<h2>Ask a Question</h2>
-			<form>
+			<form *ngIf="isLogged; else showThis">
 				<label for="Title">Title:</label>
-				<input type="Title" id="Title" name="Title" required>
+				<input type="Title" id="Title" name="Title" required [(ngModel)]="title">
 				<label for="question">Question:</label>
-				<textarea id="question" name="question" required></textarea>
-				<button type="submit">Submit</button>
+				<textarea id="question" name="question" required [(ngModel)]="content"></textarea>
+				<button type="submit"(click)="askBtn()">Submit</button>
 			</form>
+			<ng-template #showThis>
+				<h3>You must be logged in to ask a question!</h3>
+				<button (click)="goToLogin()">Login</button>
+			</ng-template>
 		</div>
 	</main>
 

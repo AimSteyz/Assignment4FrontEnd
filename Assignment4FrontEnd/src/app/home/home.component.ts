@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  isLogged: boolean = false;
+  constructor() {
+    this.isLogged = this.CheckLogin();
+  }
+
+  CheckLogin() {
+    if (localStorage.getItem('user')) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
 }

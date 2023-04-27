@@ -64,8 +64,11 @@
 		<nav class="nav">
 			<ul>
 				<li><a href="/">Home</a></li>
-				<li><a href="/search">Ask question ?</a></li>
-				<li><a href="/login">Login</a></li>
+				<li><a href="/search">Look for answer</a></li>
+				<li *ngIf="isLogged; else showThis"><a href="/" (click)="logout()">Logout</a></li>
+				<ng-template #showThis>
+					<li><a href="/login">Login</a></li>
+				</ng-template>
 			</ul>
 		</nav>
 	</header>
