@@ -8,4 +8,11 @@ import { Component, Input } from '@angular/core';
 export class QuestioncardComponent {
   @Input() cardTitle: string = '';
   @Input() cardText: string = '';
+  @Input() cardData: any = '';
+  @Input() cardRating: number = 0;
+  @Input() cardId: string = '';
+
+  showCardPage() {
+    window.location.href = '/detailpost/' + this.cardId;
+  }
 }

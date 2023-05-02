@@ -68,6 +68,14 @@
 			text-align: center;
 			line-height: 200px;
 		}
+
+		.spacebetween {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			margin-top: 25px;
+		}
 		
 	</style>
 </head>
@@ -81,7 +89,9 @@
 	</div>
 	<h1 class="center" *ngIf="IsDisplayArticleEmpty; else showThis">There is no question about that, you can ask it !</h1>
 	<ng-template #showThis>
-		<app-questioncard *ngFor="let article of DisplayArticle" [cardTitle]="article.title" [cardText]="article.content"></app-questioncard>
+		<div class="spacebetween">
+			<app-questioncard *ngFor="let article of DisplayArticle" [cardTitle]="article.title" [cardText]="article.content" [cardData]="article" [cardRating]="article.rating" [cardId]="article._id"></app-questioncard>
+		</div>
 	</ng-template>
 
 	

@@ -14,7 +14,6 @@ export class SearchComponent {
       .then((response) => {
         if (response.request.status == '200') {
           this.articleList = response.data;
-          console.log(this.articleList.length);
           this.isArticleListEmpty = false;
           return response.data;
         }
@@ -36,7 +35,6 @@ export class SearchComponent {
     this.DisplayArticle = [];
     for (let i = 0; i < this.articleList.length; i++) {
         if (this.articleList[i].title.includes(this.searchedArticle)) {
-          console.log(this.articleList[i].title);
           this.DisplayArticle.push(this.articleList[i]);
           this.IsDisplayArticleEmpty = false;
         } else {

@@ -1,0 +1,34 @@
+<div class="comment-box">
+    <div class="comment-box-avatar">
+    </div>
+    <div class="comment-box-content">
+      <div class="comment-box-header">
+        <h4 class="comment-box-author">{{author}}</h4>
+        <!-- <span class="comment-box-time">2 hours ago</span> -->
+      </div>
+      <div class="comment-box-body">
+        <p>{{comment}}</p>
+      </div>  
+      
+      <div *ngIf="!hasVoted; else showThis">
+        <div class="vote-component">
+          <button class="upvote-button">
+            <svg viewBox="0 0 24 24" (click)="upVotes(+1)">
+              <path d="M12 3L2 12h4.5v9h5v-9H18L12 3z" />
+            </svg>
+          </button>
+          <span class="vote-count">{{compVote}}</span>
+          <button class="downvote-button">
+            <svg viewBox="0 0 24 24"(click)="upVotes(-1)">
+              <path d="M12 21l10-9h-4.5v-9h-5v9H4l8 7.5z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <ng-template #showThis>
+        <div class="vote-component">
+        <span class="vote-count">{{compVote}}</span>
+        </div>
+      </ng-template>
+    </div>
+  </div>

@@ -5,6 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { SearchComponent} from './search/search.component';
 import { HomeComponent } from './home/home.component';
 import { AskComponent } from './ask/ask.component';
+import { DetailpostComponent } from './detailpost/detailpost.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }, // default route
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent }, // register route
   { path: 'search', component: SearchComponent }, // search route
   { path: 'askQuestion', component: AskComponent }, // ask route
+  { path: 'detailpost/:id', component: DetailpostComponent }, // detailpost route
 ];
 
 @NgModule({

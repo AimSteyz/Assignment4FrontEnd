@@ -1,0 +1,93 @@
+
+.comment-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 10px 20px;
+    width: auto;
+    position: relative;
+    font-family: Arial, sans-serif;
+  }
+  
+  .comment-box-avatar {
+    float: left;
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+  }
+  
+  .comment-box-avatar img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .comment-box-content {
+    overflow: hidden;
+    padding: 10px;
+  }
+  
+  .comment-box-header {
+    margin-bottom: 5px;
+  }
+  
+  .comment-box-author {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .comment-box-time {
+    display: inline-block;
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .comment-box-body {
+    overflow: hidden;
+  }
+  
+  .comment-box-body p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .vote-component {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  
+  .upvote-button, .downvote-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .upvote-button svg, .downvote-button svg {
+    width: 100%;
+    height: 100%;
+    fill: #2ecc71;
+  }
+  
+  .upvote-button:hover svg, .downvote-button:hover svg {
+    fill: #27ae60;
+  }
+  
+  .vote-count {
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  

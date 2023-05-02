@@ -12,6 +12,9 @@ import { HeaderComponent } from './header/header.component';
 import { FABComponent } from './fab/fab.component';
 import { AskComponent } from './ask/ask.component';
 import { QuestioncardComponent } from './questioncard/questioncard.component';
+import { DetailpostComponent } from './detailpost/detailpost.component';
+import { CommentComponent } from './comment/comment.component';
+import { AddcommComponent } from './addcomm/addcomm.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { QuestioncardComponent } from './questioncard/questioncard.component';
     HeaderComponent,
     FABComponent,
     AskComponent,
-    QuestioncardComponent
+    QuestioncardComponent,
+    DetailpostComponent,
+    CommentComponent,
+    AddcommComponent
   ],
   imports: [
     BrowserModule,

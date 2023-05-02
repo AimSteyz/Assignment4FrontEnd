@@ -1,0 +1,16 @@
+<h4 class="title">Write your answer</h4>
+<div class="comment-box">
+    <div class="comment-box-avatar">
+    </div>
+    <div class="comment-box-content">
+      <div class="comment-box-header">
+        <h4 class="comment-box-author">{{username}}</h4>
+        <!-- <span class="comment-box-time">2 hours ago</span> -->
+      </div>
+      <div class="comment-box-body">
+        <!-- <p>...</p> -->
+        <textarea id="question" name="question" required [(ngModel)]="answer"></textarea>
+      </div>
+      <button (click)="postComm()">Send</button>
+    </div>
+  </div>

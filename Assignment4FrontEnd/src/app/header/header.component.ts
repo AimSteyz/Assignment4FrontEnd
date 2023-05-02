@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import axios from 'axios';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,13 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isLogged: boolean = false;
+  username: string = "None";
+  userId: string = "";
   constructor() {
     this.isLogged = this.CheckLogin();
+    if (this.isLogged) {
+      this.getUser();
+    }
   }
 
   CheckLogin() {
@@ -25,4 +31,19 @@ export class HeaderComponent {
     localStorage.removeItem('user');
     window.location.href = '/';
   }
+
+  getUser() {
+    this.getUserID();
+    axios.get("http://localhost:8080/users/" + this.getUserID())
+      .then((response) => {
+        this.username = response.data.username
+      }
+    )
+  }
+
+  getUserID() {
+    var user = JSON.parse(localStorage.getItem('user') || '{}');
+    return user._id;
+  }
+
 }

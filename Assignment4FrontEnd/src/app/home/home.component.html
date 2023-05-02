@@ -140,6 +140,23 @@
             <button onclick="window.location.href='/register'">Create your account</button>
 		</div>
 	</div>
+
+	<div class="banner" *ngIf="isLogged && isPro">
+		<div>
+			<h2>Your status :</h2>
+			<p>You are a pro</p>
+            <button (click)="unsetPro()">You are not a pro ?</button>
+		</div>
+	</div>
+
+	<div class="banner" *ngIf="isLogged && !isPro">
+		<div>
+			<h2>Your status :</h2>
+			<p>You are not a pro</p>
+            <button (click)="setPro()">You are a pro ?</button>
+		</div>
+	</div>
+
 </body>
 </html>
 

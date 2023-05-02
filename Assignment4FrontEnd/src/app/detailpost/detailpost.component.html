@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="post">
+    <div class="post-thumbnail">
+      <img src="assets/electrician.jpg" alt="Example Post">
+    </div>
+    <div class="post-content">
+      <h2 class="post-title">{{title}}</h2>
+      <p class="post-excerpt">{{body}}</p>
+      <div class="post-meta">
+        <span class="post-date">Posted on {{time}}</span>
+        <br>
+        <span class="post-author">By {{author}}</span>
+        </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <app-comment *ngFor="let fullcomment of fullcomment" [comment]="fullcomment.content" [author]="fullcomment.author" [id]="fullcomment.id"></app-comment>
+  <app-addcomm *ngIf="isPro" [postId]="pageId"></app-addcomm>
+  
+  
+
+<app-footer></app-footer>

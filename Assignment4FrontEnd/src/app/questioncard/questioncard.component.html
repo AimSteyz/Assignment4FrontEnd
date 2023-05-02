@@ -1,15 +1,10 @@
 <div class="card">
-    <h2 class="card-title">{{cardTitle}}</h2>
-    <p class="card-question">{{cardText}}</p>
+  <div class="card-content">
+    <h2 class="card-title" (click)="showCardPage()">{{cardTitle}}</h2>
+    <p class="card-text">{{cardText}}</p>
     <div class="card-rating">
-      <span class="rating-count">4.5</span>
-      <div class="stars">
-        <span class="star filled"></span>
-        <span class="star filled"></span>
-        <span class="star filled"></span>
-        <span class="star filled"></span>
-        <span class="star half-filled"></span>
-      </div>
+      <span class="card-rating-text">{{cardRating}}/5</span>
     </div>
   </div>
+</div>
   
