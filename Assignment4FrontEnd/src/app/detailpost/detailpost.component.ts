@@ -37,7 +37,7 @@ export class DetailpostComponent {
   }
 
   apiCall(id: any) {
-    axios.get('http://localhost:8080/articles/' + id)
+    axios.get('https://api-wt.onrender.com/articles/' + id)
       .then((response) => {
         if (response.request.status == '200') {
           this.title = response.data.title;
@@ -62,7 +62,7 @@ export class DetailpostComponent {
   }
 
   getComments() {
-    axios.get('http://localhost:8080/comments/' + this.commentsId)
+    axios.get('https://api-wt.onrender.com/comments/' + this.commentsId)
       .then((response) => {
         if (this.commentsId == '') {
           this.comments = [];
@@ -83,7 +83,7 @@ export class DetailpostComponent {
   }
 
   getAuthor() {
-    axios.get("http://localhost:8080/users/" + this.brutauthor)
+    axios.get("https://api-wt.onrender.com/users/" + this.brutauthor)
       .then((response) => {
         this.author = response.data.username
       }
@@ -92,7 +92,7 @@ export class DetailpostComponent {
 
   getisPro() {
     console.log('getisPro');
-    axios.get('http://localhost:8080/users/' + localStorage.getItem('userID') )
+    axios.get('https://api-wt.onrender.com/users/' + localStorage.getItem('userID') )
       .then(res => {
         console.log(res.data);
         if (res.data.roles == true) {

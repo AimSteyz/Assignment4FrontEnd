@@ -34,7 +34,7 @@ export class HeaderComponent {
 
   getUser() {
     this.getUserID();
-    axios.get("http://localhost:8080/users/" + this.getUserID())
+    axios.get("https://api-wt.onrender.com/users/" + this.getUserID())
       .then((response) => {
         this.username = response.data.username
       }

@@ -11,7 +11,7 @@ import axios from 'axios';
 export class SearchComponent {
 
   async getArticles() {
-    axios.get('http://localhost:8080/articles')
+    axios.get('https://api-wt.onrender.com/articles')
       .then((response) => {
         if (response.request.status == '200') {
           this.articleList = response.data;

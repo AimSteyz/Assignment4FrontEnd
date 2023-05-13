@@ -22,7 +22,7 @@ export class CommentComponent {
   }
 
   getAuthor() {
-    axios.get("http://localhost:8080/users/" + this.author)
+    axios.get("https://api-wt.onrender.com/users/" + this.author)
       .then((response) => {
           this.author = response.data.username
       }, (error) => {
@@ -31,7 +31,7 @@ export class CommentComponent {
   }
 
   getCommentVotes() {
-    axios.get("http://localhost:8080/comments/" + this.id)
+    axios.get("https://api-wt.onrender.com/comments/" + this.id)
       .then((response) => {
         this.compVote = response.data.upVotes
       }
@@ -41,7 +41,7 @@ export class CommentComponent {
 
   upVotes(value: any) {
     this.hasVoted = true;
-    axios.put("http://localhost:8080/comments/" + this.id, { upVotes: this.compVote + value, content: this.comment})
+    axios.put("https://api-wt.onrender.com/comments/" + this.id, { upVotes: this.compVote + value, content: this.comment})
       .then((response) => {
         console.log(response.data)
         this.getVote();
@@ -50,7 +50,7 @@ export class CommentComponent {
   }
 
   getVote() {
-    axios.get("http://localhost:8080/comments/" + this.id)
+    axios.get("https://api-wt.onrender.com/comments/" + this.id)
       .then((response) => {
         this.compVote = response.data.upVotes
       }

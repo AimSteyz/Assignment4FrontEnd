@@ -28,7 +28,7 @@ export class HomeComponent {
   }
 
   getisPro() {
-    axios.get('http://localhost:8080/users/' + localStorage.getItem('userID') )
+    axios.get('https://api-wt.onrender.com/users/' + localStorage.getItem('userID') )
       .then(res => {
         console.log(res.data);
         if (res.data.roles == true) {
@@ -43,7 +43,7 @@ export class HomeComponent {
 
   setPro() {
     this.isPro = true;
-    axios.put('http://localhost:8080/users/' + localStorage.getItem('userID'), {roles: 'true'} )
+    axios.put('https://api-wt.onrender.com/users/' + localStorage.getItem('userID'), {roles: 'true'} )
       .then(res => {
         console.log(res.data);
       }
@@ -52,7 +52,7 @@ export class HomeComponent {
 
   unsetPro() {
     this.isPro = false;
-    axios.put('http://localhost:8080/users/' + localStorage.getItem('userID'), {roles: 'false'} )
+    axios.put('https://api-wt.onrender.com/users/' + localStorage.getItem('userID'), {roles: 'false'} )
       .then(res => {
         console.log(res.data);
         console.log("set role to not pro");

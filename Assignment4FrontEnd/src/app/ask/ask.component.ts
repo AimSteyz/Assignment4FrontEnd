@@ -35,7 +35,7 @@ export class AskComponent {
     console.log(this.title);
     console.log(this.content);
     console.log(this.authorId);
-    axios.post('http://localhost:8080/articles', { title: this.title, content: this.content, author: this.authorId })
+    axios.post('https://api-wt.onrender.com/articles', { title: this.title, content: this.content, author: this.authorId })
       .then((response) => {
         console.log(response);
         if (response.request.status == '200') {

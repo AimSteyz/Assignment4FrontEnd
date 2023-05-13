@@ -12,7 +12,7 @@ export class LoginComponent {
   loginBtn() {
     console.log(this.username);
     console.log(this.password);
-    axios.post('http://localhost:8080/login', { email: this.username, password: this.password })
+    axios.post('https://api-wt.onrender.com/login', { email: this.username, password: this.password })
       .then((response) => {
         console.log(response);
         console.log(response.request.status);

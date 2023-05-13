@@ -19,7 +19,7 @@ export class AddcommComponent {
     }
 
     getAuthor(){
-      axios.get("http://localhost:8080/users/" + this.userId)
+      axios.get("https://api-wt.onrender.com/users/" + this.userId)
         .then((response) => {
           this.username = response.data.username
         }
@@ -29,7 +29,7 @@ export class AddcommComponent {
     postComm() {
       console.log(this.answer);
       // redirect to detailpost
-      axios.post('http://localhost:8080/comments', {
+      axios.post('https://api-wt.onrender.com/comments', {
         author: this.userId,
         content: this.answer,
         article: this.postId
