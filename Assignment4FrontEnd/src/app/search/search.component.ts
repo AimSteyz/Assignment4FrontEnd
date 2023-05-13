@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { waitForAsync } from '@angular/core/testing';
+import { AppComponent } from '../app.component';
 import axios from 'axios';
 
 @Component({

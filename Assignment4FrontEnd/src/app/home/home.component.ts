@@ -42,7 +42,6 @@ export class HomeComponent {
   }
 
   setPro() {
-    console.log('setPro');
     this.isPro = true;
     axios.put('http://localhost:8080/users/' + localStorage.getItem('userID'), {roles: 'true'} )
       .then(res => {
@@ -52,7 +51,6 @@ export class HomeComponent {
   }
 
   unsetPro() {
-    console.log('unsetPro');
     this.isPro = false;
     axios.put('http://localhost:8080/users/' + localStorage.getItem('userID'), {roles: 'false'} )
       .then(res => {
